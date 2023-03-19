@@ -1,7 +1,3 @@
-//THIS FILE DEFINES BASIC HTML FOR WHOLE SITE
-//YOU CAN OVERWRITE ANY METADATA IN INDIVIDUAL ROUTES ALSO
-import "./globals.css";
-
 export const metadata = {
   title: "Theme Playground",
   description: "Theme Playground By Coco",
