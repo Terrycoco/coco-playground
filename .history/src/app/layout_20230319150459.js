@@ -1,6 +1,6 @@
 //THIS FILE DEFINES BASIC HTML FOR WHOLE SITE
 //YOU CAN OVERWRITE ANY METADATA IN INDIVIDUAL ROUTES ALSO
-import { Providers } from "./redux/provider";
+import { Providers } from "./globalRedux/provider";
 import "./globals.css";
 import Header from "@/components/layout/Header.js";
 import Footer from "@/components/layout/Footer";
@@ -10,7 +10,7 @@ export const metadata = {
   description: "Theme Playground By Coco",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout(children) {
   return (
     <html lang="en">
       <head>
@@ -19,11 +19,9 @@ export default function RootLayout({ children }) {
 
       <body>
         <Providers>
-          <>
-            <Header />
-            {children}
-            <Footer />
-          </>
+          <Header />
+          {children}
+          <Footer />
         </Providers>
       </body>
     </html>

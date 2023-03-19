@@ -10,7 +10,7 @@ export const metadata = {
   description: "Theme Playground By Coco",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout(children) {
   return (
     <html lang="en">
       <head>
@@ -19,11 +19,9 @@ export default function RootLayout({ children }) {
 
       <body>
         <Providers>
-          <>
-            <Header />
-            {children}
-            <Footer />
-          </>
+          <Header />
+          {children}
+          <Footer />
         </Providers>
       </body>
     </html>

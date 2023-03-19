@@ -1,13 +1,10 @@
-"use client";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTheme } from "./redux/slices/themeSlice";
+import { selectTheme } from "@/store/themeSlice";
 
 export default function Page() {
-  const theme = useSelector(selectTheme);
-  console.log("page recd theme:", theme);
   return (
     <main>
-      <section>this is a section</section>
+      <section></section>
     </main>
   );
 }

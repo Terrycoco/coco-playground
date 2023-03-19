@@ -1,6 +1,6 @@
 "use client";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTheme } from "./redux/slices/themeSlice";
+import { selectTheme } from "./globalRedux/slices/counterSlice";
 
 export default function Page() {
   const theme = useSelector(selectTheme);
