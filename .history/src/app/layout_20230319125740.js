@@ -2,7 +2,6 @@
 //YOU CAN OVERWRITE ANY METADATA IN INDIVIDUAL ROUTES ALSO
 import "./globals.css";
 import Header from "@/components/layout/Header.js";
-import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Theme Playground",
@@ -15,10 +14,10 @@ export default function RootLayout({ children }) {
       <head>
         <title>Coco Theme Playground</title>
       </head>
+
       <body>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

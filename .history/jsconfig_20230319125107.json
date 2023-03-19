@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./Users/terrymarr/Projects/coco-playground/src",
+    "paths": {
+      "@/*": ["/*"]
+    }
+  }
+}
