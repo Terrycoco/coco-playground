@@ -12,7 +12,6 @@ function Header() {
   const getHeaderStyles = () => {
     let styles = { ...theme.containers.header };
     styles.backgroundColor = variables[styles.backgroundColor];
-    return styles;
   };
 
   return <header style={getHeaderStyles()}>Header</header>;

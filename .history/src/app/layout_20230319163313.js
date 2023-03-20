@@ -1,16 +1,15 @@
 //THIS FILE DEFINES BASIC HTML FOR WHOLE SITE
 //YOU CAN OVERWRITE ANY METADATA IN INDIVIDUAL ROUTES ALSO
 "use client";
-import { Providers } from "./store/provider";
+import { Providers } from "./redux/provider";
 import "./globals.css";
 import Header from "@/components/layout/Header.js";
 import Footer from "@/components/layout/Footer";
 
-//can't use metadata on files that use client
-// export const metadata = {
-//   title: "Theme Playground",
-//   description: "Theme Playground By Coco",
-// };
+export const metadata = {
+  title: "Theme Playground",
+  description: "Theme Playground By Coco",
+};
 
 export default function RootLayout({ children }) {
   return (

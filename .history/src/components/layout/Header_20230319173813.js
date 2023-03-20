@@ -6,13 +6,11 @@ import { selectVariables } from "@/slices/variablesSlice";
 
 function Header() {
   const theme = useSelector(selectTheme);
-  const variables = useSelector(selectVariables);
   console.log("header theme:", theme.containers.header);
 
   const getHeaderStyles = () => {
-    let styles = { ...theme.containers.header };
+    let styles = theme.container.header;
     styles.backgroundColor = variables[styles.backgroundColor];
-    return styles;
   };
 
   return <header style={getHeaderStyles()}>Header</header>;
