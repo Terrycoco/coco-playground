@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/slices/*": ["./src/app/store/slices/*"],
+      "@/store/*": ["./src/app/store/*"],
+      "@/context/*": ["./src/app/context/*"],
+      "@/hooks/*": ["./src/app/hooks/*"]
+    }
+  }
+}

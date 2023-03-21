@@ -1,0 +1,43 @@
+:root {
+  /* in alphabetical order */
+  --font-bitter: "__Bitter_0c9f22", "__Bitter_Fallback_0c9f22";
+  --font-cabin: "__Cabin_40a278", "__Cabin_Fallback_40a278";
+  --font-cabin: "__Caveat_8a30da", "__Caveat_Fallback_8a30da";
+  --font-comfortaa: "__Comfortaa_9d0dbd", "__Comfortaa_Fallback_9d0dbd";
+
+  --font-gelasio: "__Gelasio_f3781c", "__Gelasio_Fallback_f3781c";
+
+  --font-inter: "__Inter_9c9965", "__Inter_Fallback_9c9965";
+
+  --font-josefin-sans: "__Josefin_Sans_d19b53", "__Josefin_Sans_Fallback_d19b53";
+
+  --font-karla: "__Karla_6f438c", "__Karla_Fallback_6f438c";
+  --font-lato: "__Lato_5dc2e1", "__Lato_Fallback_5dc2e1";
+  --font-lora: "__Lora_96312a", "__Lora_Fallback_96312a";
+
+  --font-montserrat: "__Montserrat_258d1f", "__Montserrat_Fallback_258d1f";
+
+  --font-nunito: "__Nunito_81bb96", "__Nunito_Fallback_81bb96";
+
+  --font-oleo-script: "__Oleo_Script_5e044c", "__Oleo_Script_Fallback_5e044c";
+  --font-open_sans: "__Open_Sans_d8c39e", "__Open_Sans_Fallback_d8c39e";
+
+  --font-playfair-display: "__Playfair_Display_267efd",
+    "__Playfair_Display_Fallback_267efd";
+
+  --font-poppins: "__Poppins_a6ab47", "__Poppins_Fallback_a6ab47";
+
+  --font-quicksand: "__Quicksand_db5bc9", "__Quicksand_Fallback_db5bc9";
+
+  --font-raleway: "__Raleway_6a7471", "__Raleway_Fallback_6a7471";
+  --font-roboto-flex: "__Roboto_Flex_442174", "__Roboto_Flex_Fallback_442174";
+  --font-roboto_mono: "__Roboto_Mono_77395d", "__Roboto_Mono_Fallback_77395d";
+  --font-roboto-serif: "__Roboto_Serif_e3f065", "__Roboto_Serif_Fallback_e3f065";
+  --font-rubik: "__Rubik_5adf47", "__Rubik_Fallback_5adf47";
+
+  --font-sansita-swashed: "__Sansita_Swashed_04f9e8",
+    "__Sansita_Swashed_Fallback_04f9e8";
+  --font-space-mono: "__Space_Mono_f90887", "__Space_Mono_Fallback_f90887";
+
+  --font-work-sans: "__Work_Sans_df66b1", "__Work_Sans_Fallback_df66b1";
+}
