@@ -6,14 +6,14 @@ const FormWrapper = (props) => {
 
   const styles = {
     form: {
-      backgroundColor: variables["var(--clr-primary5)"],
+      backgroundColor: "transparent",
       overflowY: "scroll",
       paddingTop: "0.5rem",
       paddingLeft: "1rem",
       paddingRight: "1rem",
       paddingBottom: "5rem",
       overflowY: "scroll",
-      paddingTop: "2rem", //account for tabs
+      paddingTop: "2rem",
       height: "100vh",
       fontFamily: variables["var(--font-forms)"],
     },

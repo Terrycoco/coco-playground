@@ -42,10 +42,7 @@ const DeviceMenu = () => {
 
   const getLiStyles = (src) => {
     let listyle = { ...styles.li };
-    if (src === "full" && fullScreen == true) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
-    } else if (src === currentDevice) {
+    if (src === currentDevice || src === "full") {
       listyle.letterSpacing = "1px";
       listyle.fontWeight = "700";
     } else {

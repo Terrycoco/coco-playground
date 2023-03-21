@@ -76,7 +76,7 @@ const FormController = (props) => {
           top: 0,
           left: 0,
           right: 0,
-          zIndex: 10,
+          marginBottom: "1rem",
         }}
       >
         <Tab id={1} style={getTabStyle(1)} onClick={(e) => clickTab(e, 1)}>

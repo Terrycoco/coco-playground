@@ -13,15 +13,9 @@ function Header() {
   const styles = {
     header: {
       position: "fixed",
-      width: "100vw",
-      top: 0,
-      right: 0,
-      left: 0,
-      zIndex: 5,
       display: "flex",
       justifyContent: "space-between",
       flexWrap: "wrap",
-      borderBottom: "1px solid lightgray",
     },
   };
 

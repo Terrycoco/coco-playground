@@ -70,15 +70,7 @@ const FormController = (props) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <TabContainer
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 10,
-        }}
-      >
+      <TabContainer style={{ position: "absolute", top: 0, left: 0 }}>
         <Tab id={1} style={getTabStyle(1)} onClick={(e) => clickTab(e, 1)}>
           Settings
         </Tab>

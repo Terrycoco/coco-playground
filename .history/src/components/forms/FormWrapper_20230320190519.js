@@ -13,7 +13,7 @@ const FormWrapper = (props) => {
       paddingRight: "1rem",
       paddingBottom: "5rem",
       overflowY: "scroll",
-      paddingTop: "2rem", //account for tabs
+      paddingTop: "2.5rem", //account for tabs
       height: "100vh",
       fontFamily: variables["var(--font-forms)"],
     },

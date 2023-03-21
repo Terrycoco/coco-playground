@@ -42,10 +42,7 @@ const DeviceMenu = () => {
 
   const getLiStyles = (src) => {
     let listyle = { ...styles.li };
-    if (src === "full" && fullScreen == true) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
-    } else if (src === currentDevice) {
+    if (src === currentForm) {
       listyle.letterSpacing = "1px";
       listyle.fontWeight = "700";
     } else {
@@ -70,18 +67,23 @@ const DeviceMenu = () => {
     <menu style={styles.menu}>
       <li
         id="mobile"
-        style={getLiStyles("mobile")}
+        style={styles.li}
         className={css.li}
         onClick={handleSelect}
       >
         mobile
       </li>
-      <li id="tablet" style={getLiStyles("tablet")} onClick={handleSelect}>
+      <li
+        id="tablet"
+        style={styles.li}
+        className={css.li}
+        onClick={handleSelect}
+      >
         tablet
       </li>
       <li
         id="laptop"
-        style={getLiStyles("laptop")}
+        style={styles.li}
         className={css.li}
         onClick={handleSelect}
       >
@@ -89,26 +91,16 @@ const DeviceMenu = () => {
       </li>
       <li
         id="desktop"
-        style={getLiStyles("desktop")}
+        style={styles.li}
         className={css.li}
         onClick={handleSelect}
       >
         desktop
       </li>
-      <li
-        id="tv"
-        style={getLiStyles("tv")}
-        className={css.li}
-        onClick={handleSelect}
-      >
+      <li id="tv" style={styles.li} className={css.li} onClick={handleSelect}>
         tv
       </li>
-      <li
-        id="full"
-        style={getLiStyles("full")}
-        onClick={handleSelect}
-        className={css.li}
-      >
+      <li id="full" style={styles.li} onClick={handleSelect} className={css.li}>
         Full
       </li>
     </menu>
