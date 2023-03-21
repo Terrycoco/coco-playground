@@ -35,14 +35,17 @@ function MainMenu() {
 
   const getLiStyles = (src) => {
     let listyle = { ...styles.li };
+    console.log("listyle", listyle);
     if (src === currentForm) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
-    } else {
-      listyle.letterSpacing = "normal";
-      listyle.fontWeight = "400";
+      console.log("currentForm:", currentForm);
+      //   listyle.letterSpacing = "1px";
+      //   listyle.fontWeight = "700";
+      // } else {
+      //   listyle.letterSpacing = "normal";
+      //   listyle.fontWeight = "400";
     }
-    return listyle;
+    //return { listyle };
+    return { color: "red" };
   };
 
   const handleClick = (e) => {

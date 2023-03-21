@@ -26,23 +26,11 @@ function MainMenu() {
       justifyContent: "space-evenly",
     },
     li: {
-      fontFamily: variables["var(--font-forms)"], //use menu >li to set text?
+      fontFamily: variables["var(--font-forms)"],
       fontSize: "1em",
       textTransform: "uppercase",
       paddingLeft: "1.5em",
     },
-  };
-
-  const getLiStyles = (src) => {
-    let listyle = { ...styles.li };
-    if (src === currentForm) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
-    } else {
-      listyle.letterSpacing = "normal";
-      listyle.fontWeight = "400";
-    }
-    return listyle;
   };
 
   const handleClick = (e) => {
@@ -57,7 +45,7 @@ function MainMenu() {
     <menu style={styles.menu}>
       <li
         id="typography"
-        style={getLiStyles("typography")}
+        style={styles.li}
         className={css.li}
         onClick={handleClick}
       >
@@ -65,7 +53,7 @@ function MainMenu() {
       </li>
       <li
         id="spacing"
-        style={getLiStyles("spacing")}
+        style={styles.li}
         className={css.li}
         onClick={handleClick}
       >
@@ -73,7 +61,7 @@ function MainMenu() {
       </li>
       <li
         id="colors"
-        style={getLiStyles("colors")}
+        style={styles.li}
         className={css.li}
         onClick={handleClick}
       >

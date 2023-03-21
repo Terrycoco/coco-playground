@@ -33,14 +33,12 @@ function MainMenu() {
     },
   };
 
-  const getLiStyles = (src) => {
-    let listyle = { ...styles.li };
-    if (src === currentForm) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
+  const getLiStyles = (e) => {
+    let listyle = styles.li;
+    if (e.target.id === currentForm) {
+      (listyle.letterSpacing = "1px"), (listyle.fontWeight = "700");
     } else {
-      listyle.letterSpacing = "normal";
-      listyle.fontWeight = "400";
+      (listyle.letterSpacing = "normal"), (listyle.fontWeight = "400");
     }
     return listyle;
   };
@@ -57,7 +55,7 @@ function MainMenu() {
     <menu style={styles.menu}>
       <li
         id="typography"
-        style={getLiStyles("typography")}
+        style={getLiStyles()}
         className={css.li}
         onClick={handleClick}
       >
@@ -65,7 +63,7 @@ function MainMenu() {
       </li>
       <li
         id="spacing"
-        style={getLiStyles("spacing")}
+        style={getLiStyles()}
         className={css.li}
         onClick={handleClick}
       >
@@ -73,7 +71,7 @@ function MainMenu() {
       </li>
       <li
         id="colors"
-        style={getLiStyles("colors")}
+        style={getLiStyles()}
         className={css.li}
         onClick={handleClick}
       >

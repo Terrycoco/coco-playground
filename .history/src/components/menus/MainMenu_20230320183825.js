@@ -35,7 +35,9 @@ function MainMenu() {
 
   const getLiStyles = (src) => {
     let listyle = { ...styles.li };
+    console.log("listyle", listyle);
     if (src === currentForm) {
+      console.log("currentForm:", currentForm);
       listyle.letterSpacing = "1px";
       listyle.fontWeight = "700";
     } else {

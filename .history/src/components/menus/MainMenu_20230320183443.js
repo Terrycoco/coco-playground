@@ -33,16 +33,18 @@ function MainMenu() {
     },
   };
 
-  const getLiStyles = (src) => {
+  const getLiStyles = (e) => {
     let listyle = { ...styles.li };
-    if (src === currentForm) {
-      listyle.letterSpacing = "1px";
-      listyle.fontWeight = "700";
-    } else {
-      listyle.letterSpacing = "normal";
-      listyle.fontWeight = "400";
-    }
-    return listyle;
+    console.log("listyle", listyle);
+     if (e.target.id === currentForm) {
+    //   listyle.letterSpacing = "1px";
+    //   listyle.fontWeight = "700";
+    // } else {
+    //   listyle.letterSpacing = "normal";
+    //   listyle.fontWeight = "400";
+    // }
+    //return { listyle };
+    return { color: "red" };
   };
 
   const handleClick = (e) => {
