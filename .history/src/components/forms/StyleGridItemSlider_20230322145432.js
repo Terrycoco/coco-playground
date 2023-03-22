@@ -1,16 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
+import StyleGridItem from "@/components/forms/StyleGridItem";
+import RangeSlider from "@/components/sliders/RangeSlider";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTheme } from "@/slices/themeSlice";
+import { selectCurrentDevice } from "@/slices/uiSlice";
 
-const SliderItem = ({ section, element, propName, defaultValue, onSelect }) => {
+const StyleGridItemSlider = ({ section, element, propName, onSelect }) => {
   const [val, setVal] = useState(null);
+  const theme = useSelector(selectTheme);
+  const device = useSelector(selectCurrentDevice);
 
   useEffect(() => {
+    let defaultValue = theme[section][element][propName];
     if (defaultValue) {
-      let num = parseFloat(defaultValue.match(/[\d\.]+/));
-      setVal(num);
-      // console.log(propName, "val is:", num);
+      if (typeof defaultValue === "string") {
+        console.log("defaultVal:", defaultValue);
+        let num = parseFloat(defaultValue.match(/[\d\.]+/));
+        setVal(num);
+        // console.log(propName, "val is:", num);
+      } else {
+        setVal(defaultValue);
+      }
     }
-  }, []);
+  }, [device, theme, section.element, propName]);
 
   //update comes from SliderItem
   function handleValueChange(newval, unit) {
@@ -60,6 +73,26 @@ const SliderItem = ({ section, element, propName, defaultValue, onSelect }) => {
           onChange: (newval) => handleValueChange(newval, "ch"),
         };
         break;
+      case "baseFontSize":
+        return {
+          min: 10,
+          max: 30,
+          value: val,
+          step: 1,
+          unit: "px",
+          onChange: (newval) => handleValueChange(newval, "px"),
+        };
+        break;
+      case "baseLineHeight":
+        return {
+          min: 1.0,
+          max: 4.0,
+          value: val,
+          step: 0.125,
+          unit: "",
+          onChange: (newval) => handleValueChange(newval, ""),
+        };
+        break;
       default:
         return {
           min: 0,
@@ -86,3 +119,5 @@ const SliderItem = ({ section, element, propName, defaultValue, onSelect }) => {
     </StyleGridItem>
   );
 };
+
+export default StyleGridItemSlider;

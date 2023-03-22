@@ -106,7 +106,7 @@ const StyleGridItemSlider = ({ section, element, propName, onSelect }) => {
   };
 
   //each slider needs own props
-  const sliderProps = useMemo(() => getSliderProps(), [val, getSliderProps]);
+  const sliderProps = useMemo(() => getSliderProps(), [val]);
 
   return (
     <StyleGridItem label={propName} key={element + propName}>
