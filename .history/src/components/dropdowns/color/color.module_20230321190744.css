@@ -1,0 +1,34 @@
+.input[type="color"] {
+  appearance: none;
+  border: none;
+  padding: 0;
+  height: 35px;
+  width: 100%;
+  background: white;
+  box-sizing: unset;
+   outline: 1px solid #d5d9d9;
+  /* borderRadius: 3px;
+  boxSizing: border-box;
+  cursor: pointer;
+  display: flex;
+  alignItems: "center",
+  justifyContent: "space-between",
+  lineHeight: "29px",
+  height: "35px",
+  padding: 0,
+  position: "relative",
+  textAlign: "center",
+  textDecoration: "none",
+  userSelect: "none",
+  WebkitUserSelect: "none",
+  touchAction: "manipulation",
+  zIndex: 25, */ */
+}
+
+.input[type="color" i]::-webkit-color-swatch {
+  border: none;
+}
+
+.input[type="color" i]::-moz-color-swatch {
+  border: none;
+}

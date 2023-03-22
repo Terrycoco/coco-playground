@@ -1,0 +1,17 @@
+.input[type="color"] {
+  appearance: none;
+  border: solid 1px red;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  background: white;
+  box-sizing: unset;
+}
+
+.input[type="color" i]::-webkit-color-swatch {
+  border: solid 1px blue;
+}
+
+.input[type="color" i]::-moz-color-swatch {
+  border: none;
+}

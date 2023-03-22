@@ -1,0 +1,19 @@
+.input[type="color"] {
+  appearance: none;
+  border: none;
+  padding: 0;
+  height: 35px;
+  width: 100%;
+  background: white;
+  box-sizing: unset;
+  outline: 1px solid #d5d9d9;
+  display: flex;
+}
+
+.input[type="color" i]::-webkit-color-swatch {
+  border: none;
+}
+
+.input[type="color" i]::-moz-color-swatch {
+  border: none;
+}
