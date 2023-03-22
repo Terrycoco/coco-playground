@@ -121,10 +121,9 @@ const ColorPickerDropdown = ({
   };
 
   const closeMe = () => {
+    setIsOpen(false);
     //reset because didn't select
     reset();
-    setCurrent(orig);
-    setIsOpen(false);
   };
 
   const handleChange = (hex) => {

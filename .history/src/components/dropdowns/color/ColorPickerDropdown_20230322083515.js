@@ -107,6 +107,7 @@ const ColorPickerDropdown = ({
       value: orig,
       themeVar: `--clr-${category}`,
     };
+    setCurrent(orig);
     dispatch(updateColor(payload));
   };
 
@@ -123,7 +124,6 @@ const ColorPickerDropdown = ({
   const closeMe = () => {
     //reset because didn't select
     reset();
-    setCurrent(orig);
     setIsOpen(false);
   };
 
