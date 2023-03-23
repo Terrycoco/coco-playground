@@ -31,7 +31,7 @@ const StyleGridItemSlider = ({
         setVal(parseFloat(valunit.val));
         setUnit(valunit.unit);
       } else if (typeof defaultValue === "number") {
-        setVal(parseFloat(defaultValue));
+        setVal(defaultValue);
         setUnit("");
       }
     }
@@ -111,21 +111,13 @@ const StyleGridItemSlider = ({
         break;
       case "fontSize":
         if (unit === "rem") {
-          return {
-            min: 0.5,
-            max: 7,
-            value: val,
-            step: 0.1,
-            unit: unit,
-            onChange: (newval) => handleValueChange(newval),
-          };
         } else {
           return {
             min: 6,
             max: 72,
             value: val,
             step: 1,
-            unit: unit,
+            unit: { unit },
             onChange: (newval) => handleValueChange(newval),
           };
         }

@@ -35,6 +35,7 @@ export default function Page() {
       let fs = theme.text[el].fontSize[currentDevice];
       let fsem = fs.replace("rem", "em");
       let lh = theme.text[el].lineHeight[currentDevice];
+      console.log("fs:", fsem, "lh:", lh);
       style.fontSize = fsem;
       style.lineHeight = lh;
       style.color = style.color

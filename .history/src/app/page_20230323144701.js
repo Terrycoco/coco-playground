@@ -29,19 +29,17 @@ export default function Page() {
   }, [dispatch, userScreen]);
 
   const getTextStyle = (el) => {
-    if (currentDevice !== undefined) {
-      let style = { ...theme.text[el] };
-      console.log("style:", style);
-      let fs = theme.text[el].fontSize[currentDevice];
-      let fsem = fs.replace("rem", "em");
-      let lh = theme.text[el].lineHeight[currentDevice];
-      style.fontSize = fsem;
-      style.lineHeight = lh;
-      style.color = style.color
-        ? variables[style.color]
-        : variables["var(--clr-blackish)"];
-      return style;
-    }
+    let style = { ...theme.text[el] };
+    console.log("style:", style);
+    let fs = theme.text[el].fontSize[currentDevice].replace("rem", "em");
+    let lh = theme.text[el].lineHeight[currentDevice];
+    console.log("fs:", fs, "lh:", lh);
+    style.fontSize = fs;
+    style.lineHeight = lh;
+    style.color = style.color
+      ? variables[style.color]
+      : variables["var(--clr-blackish)"];
+    return style;
   };
 
   return (

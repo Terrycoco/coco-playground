@@ -116,7 +116,7 @@ const StyleGridItemSlider = ({
             max: 7,
             value: val,
             step: 0.1,
-            unit: unit,
+            unit: { unit },
             onChange: (newval) => handleValueChange(newval),
           };
         } else {
@@ -125,7 +125,7 @@ const StyleGridItemSlider = ({
             max: 72,
             value: val,
             step: 1,
-            unit: unit,
+            unit: { unit },
             onChange: (newval) => handleValueChange(newval),
           };
         }
