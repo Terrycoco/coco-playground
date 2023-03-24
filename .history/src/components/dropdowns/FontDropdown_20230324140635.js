@@ -42,10 +42,7 @@ const DropdownOption = (props) => {
         >
           {props.category}
         </span>,
-        <span
-          key={`${element}${propName}val`}
-          style={{ width: "50%", fontFamily: props.fontVar }}
-        >
+        <span style={{ width: "50%", fontFamily: props.fontVar }}>
           {props.name}
         </span>,
       ];
