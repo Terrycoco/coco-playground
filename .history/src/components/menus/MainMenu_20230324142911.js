@@ -66,9 +66,11 @@ function MainMenu() {
     logo: {
       fontFamily: "var(--font-caveat)",
       color: "white",
+      width: "auto",
       fontSize: "1.1rem",
       letterSpacing: "2px",
       fontWeight: "700",
+      flex: 1,
     },
   };
 
@@ -133,15 +135,12 @@ function MainMenu() {
     if (userScreen !== undefined && isOneOf(userScreen, ["mobile", "tablet"])) {
       return (
         <menu style={styles.menuSmall}>
-          <div>
-            {" "}
-            <IconButton
-              onClick={toggleMenu}
-              style={getHamburgerStyle()}
-              type={mdiMenu}
-            />
-            {getSubMenu()}
-          </div>
+          <IconButton
+            onClick={toggleMenu}
+            style={getHamburgerStyle()}
+            type={mdiMenu}
+          />
+          {getSubMenu()}
           <span style={styles.logo}>Coco Playground</span>
 
           <IconButton

@@ -66,7 +66,8 @@ function MainMenu() {
     logo: {
       fontFamily: "var(--font-caveat)",
       color: "white",
-      fontSize: "1.1rem",
+      width: "auto",
+      fontSize: "1.5rem",
       letterSpacing: "2px",
       fontWeight: "700",
     },
@@ -133,16 +134,13 @@ function MainMenu() {
     if (userScreen !== undefined && isOneOf(userScreen, ["mobile", "tablet"])) {
       return (
         <menu style={styles.menuSmall}>
-          <div>
-            {" "}
-            <IconButton
-              onClick={toggleMenu}
-              style={getHamburgerStyle()}
-              type={mdiMenu}
-            />
-            {getSubMenu()}
-          </div>
-          <span style={styles.logo}>Coco Playground</span>
+          <IconButton
+            onClick={toggleMenu}
+            style={getHamburgerStyle()}
+            type={mdiMenu}
+          />
+          {getSubMenu()}
+          <span style={styles.logo}>Playground</span>
 
           <IconButton
             onClick={(e) => dispatch(updateIsDrawerOpen(!isDrawerOpen))}

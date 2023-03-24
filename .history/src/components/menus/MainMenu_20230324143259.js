@@ -67,6 +67,7 @@ function MainMenu() {
       fontFamily: "var(--font-caveat)",
       color: "white",
       fontSize: "1.1rem",
+      backgroundColor: "yellow",
       letterSpacing: "2px",
       fontWeight: "700",
     },
