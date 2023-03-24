@@ -1,0 +1,38 @@
+import { useSelector } from "react-redux";
+import { selectVariables } from "@/slices/variablesSlice";
+
+const FormWrapper = (props) => {
+  const variables = useSelector(selectVariables);
+
+  const styles = {
+    form: {
+      backgroundColor: variables["var(--clr-primary5)"],
+      overflowY: "scroll",
+      paddingTop: "0.5rem",
+      paddingBottom: "5rem",
+      overflowY: "scroll",
+      height: "100%",
+      fontFamily: variables["var(--font-forms)"],
+    },
+    title: {
+      fontFamily: variables["var(--font-forms)"],
+      backgroundColor: variables["var(--clr-primary5)"],
+      color: variables["var(--clr-primary)"],
+      fontSize: "16px",
+      fontWeight: "bold",
+      textAlign: "center",
+      width: "100%",
+      textTransform: "uppercase",
+      marginTop: "1rem",
+    },
+  };
+
+  return (
+    <div style={styles.form}>
+      <div style={styles.title}>{props.title}</div>
+      {props.children}
+    </div>
+  );
+};
+
+export default FormWrapper;
