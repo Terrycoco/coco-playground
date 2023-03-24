@@ -50,7 +50,7 @@ const DropdownOption = (props) => {
 
   return (
     <li
-      key={props.fontVar}
+      key={useId}
       data-value={props.fontVar}
       onClick={handleSelect}
       style={{
@@ -133,7 +133,7 @@ const FontDropdown = ({
 
   const getOptions = () => {
     let result = [];
-    if (options == undefined) return <li>Loading...</li>;
+    if (options == undefined) return <li>"Loading..."</li>;
     //is array (from all fonts )
     if (Array.isArray(options)) {
       options.map((opt, idx) => {

@@ -50,7 +50,7 @@ const DropdownOption = (props) => {
 
   return (
     <li
-      key={props.fontVar}
+      key={useId}
       data-value={props.fontVar}
       onClick={handleSelect}
       style={{
