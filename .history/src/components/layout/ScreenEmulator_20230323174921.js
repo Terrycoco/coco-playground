@@ -31,7 +31,7 @@ const ScreenEmulator = ({ children, ...props }) => {
 
   //get some valid heights
   useEffect(() => {
-    if (isLoaded && userDevice !== undefined) {
+    if (isLoaded) {
       if (isFullScreen === true) {
         console.log("userDevice:", userDevice);
         setWidth(window.innerWidth);
