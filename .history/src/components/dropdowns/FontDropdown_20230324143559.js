@@ -47,7 +47,7 @@ const DropdownOption = (props) => {
           style={{
             width: "50%",
             fontFamily: props.fontVar,
-            paddingLeft: "1rem",
+            paddingLeft: "0.5rem",
           }}
         >
           {props.name}
@@ -172,9 +172,7 @@ const FontDropdown = ({
       <OutsideAlerter key={Math.random()} onClickOutside={closeMe}>
         <div data-id="font-dropdown" style={styles.dropdown}>
           <div style={styles.display} onClick={handleClick}>
-            <span style={{ fontFamily: current.fontVar, paddingLeft: "1rem" }}>
-              {current.name}
-            </span>{" "}
+            <span style={{ fontFamily: current.fontVar }}>{current.name}</span>{" "}
             <IconButton
               key={`icon${id}`}
               type={mdiMenuDown}

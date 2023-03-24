@@ -38,17 +38,14 @@ const DropdownOption = (props) => {
             width: "50%",
             fontFamily: variables["var(--font-forms)"],
             color: "gray",
+            paddingLeft: ".5rem",
           }}
         >
           {props.category}
         </span>,
         <span
           key={`${element}${propName}val`}
-          style={{
-            width: "50%",
-            fontFamily: props.fontVar,
-            paddingLeft: "1rem",
-          }}
+          style={{ width: "50%", fontFamily: props.fontVar }}
         >
           {props.name}
         </span>,
@@ -172,9 +169,7 @@ const FontDropdown = ({
       <OutsideAlerter key={Math.random()} onClickOutside={closeMe}>
         <div data-id="font-dropdown" style={styles.dropdown}>
           <div style={styles.display} onClick={handleClick}>
-            <span style={{ fontFamily: current.fontVar, paddingLeft: "1rem" }}>
-              {current.name}
-            </span>{" "}
+            <span style={{ fontFamily: current.fontVar }}>{current.name}</span>{" "}
             <IconButton
               key={`icon${id}`}
               type={mdiMenuDown}
