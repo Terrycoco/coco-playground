@@ -1,7 +1,7 @@
 import { useId, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectVariables } from "@/slices/variablesSlice";
-import { mdiMenuDown, mdiMenuUp } from "@mdi/js";
+import { mdiMenuDown } from "@mdi/js";
 import IconButton from "@/components/buttons/IconButton";
 
 const StyleGridExpander = (props) => {
@@ -19,7 +19,6 @@ const StyleGridExpander = (props) => {
       fontFamily: "var(--font-forms)",
       display: "flex",
       flexDirection: "space-between",
-      alignItems: "center",
       fontSize: "14px",
       textTransform: "uppercase",
       paddingTop: "1rem",
@@ -38,6 +37,9 @@ const StyleGridExpander = (props) => {
       backgroundColor: "white",
       border: "1px solid lightgray",
     },
+    icon: {
+      color: variables["var(--clr-primary)"],
+    },
   };
 
   return (
@@ -45,9 +47,10 @@ const StyleGridExpander = (props) => {
       <div onClick={clickMe} style={styles.title}>
         {props.title}
         <IconButton
-          type={isExpanded ? mdiMenuUp : mdiMenuDown}
-          color={variables["var(--clr-primary)"]}
+          type={mdiMenuDown}
+          color="darkgray"
           onClick={clickMe}
+          style={styles.icon}
         />
       </div>
       <div style={styles.expander}>

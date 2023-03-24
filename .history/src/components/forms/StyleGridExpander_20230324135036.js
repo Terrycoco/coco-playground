@@ -19,7 +19,6 @@ const StyleGridExpander = (props) => {
       fontFamily: "var(--font-forms)",
       display: "flex",
       flexDirection: "space-between",
-      alignItems: "center",
       fontSize: "14px",
       textTransform: "uppercase",
       paddingTop: "1rem",

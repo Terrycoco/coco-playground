@@ -19,7 +19,6 @@ const StyleGridExpander = (props) => {
       fontFamily: "var(--font-forms)",
       display: "flex",
       flexDirection: "space-between",
-      alignItems: "center",
       fontSize: "14px",
       textTransform: "uppercase",
       paddingTop: "1rem",
@@ -45,7 +44,7 @@ const StyleGridExpander = (props) => {
       <div onClick={clickMe} style={styles.title}>
         {props.title}
         <IconButton
-          type={isExpanded ? mdiMenuUp : mdiMenuDown}
+          type={mdiMenuDown}
           color={variables["var(--clr-primary)"]}
           onClick={clickMe}
         />
