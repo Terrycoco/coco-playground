@@ -15,7 +15,7 @@ const StyleGridItem = (props) => {
       flexBasis: "40%",
       paddingLeft: ".6rem",
       fontFamily: variables["var(--font-forms)"],
-      fontSize: ".8rem",
+      fontSize: "14px",
       display: "flex",
       alignItems: "center",
       color: "gray",
