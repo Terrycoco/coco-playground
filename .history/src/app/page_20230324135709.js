@@ -27,27 +27,29 @@ export default function Page() {
     },
   };
 
+  //run once
   useEffect(() => {
-    //run once
-    if (currentDevice == undefined) {
-      dispatch(updateCurrentDevice(userScreen));
-    }
-    dispatch(updateUserDevice(userScreen));
-  }, [dispatch, userScreen]);
+    dispatch(updateCurrentDevice(userScreen));
+  }, [dispatch]);
 
   const forceUpdate = useCallback(() => {
     console.log("update forced");
     updateState({});
   }, []);
 
-  // useEffect(() => {
-  //   //want to force rerender if variables have changed
-  //   console.log("variables have changed");
-  //   if (variables["var(--font-body)"] !== bodyFont) {
-  //     setBodyFont(variables["var(--font-body)"]);
-  //     forceUpdate();
-  //   }
-  // }, [variables]);
+  //after render update current device
+  useEffect(() => {
+    dispatch(updateUserDevice(userScreen));
+  }, [dispatch, userScreen]);
+
+  useEffect(() => {
+    //want to force rerender if variables have changed
+    console.log("variables have changed");
+    if (variables["var(--font-body)"] !== bodyFont) {
+      setBodyFont(variables["var(--font-body)"]);
+      forceUpdate();
+    }
+  }, [variables]);
 
   const getTextStyle = (el) => {
     if (currentDevice !== undefined) {

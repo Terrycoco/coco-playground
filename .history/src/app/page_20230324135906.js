@@ -40,14 +40,14 @@ export default function Page() {
     updateState({});
   }, []);
 
-  // useEffect(() => {
-  //   //want to force rerender if variables have changed
-  //   console.log("variables have changed");
-  //   if (variables["var(--font-body)"] !== bodyFont) {
-  //     setBodyFont(variables["var(--font-body)"]);
-  //     forceUpdate();
-  //   }
-  // }, [variables]);
+  useEffect(() => {
+    //want to force rerender if variables have changed
+    console.log("variables have changed");
+    if (variables["var(--font-body)"] !== bodyFont) {
+      setBodyFont(variables["var(--font-body)"]);
+      forceUpdate();
+    }
+  }, [variables]);
 
   const getTextStyle = (el) => {
     if (currentDevice !== undefined) {
