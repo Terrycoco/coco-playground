@@ -40,7 +40,7 @@ const DropdownOption = (props) => {
             fontSize: ".8rem",
           }}
         >
-          {getCatFromThemeVar(props.themeVar)}
+          {props.category}
         </span>,
         <span
           key={`${props.element}${props.propName}val`}
@@ -82,9 +82,15 @@ const FontDropdown = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(defaultObj);
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     setCurrent(defaultObj);
+    if (defaultObj && defaultObj.hasOwnProperty("themeVar") > 0) {
+      setCategory(
+        defaultObj.themeVar.slice(11, defaultObj.themeVar.length - 1)
+      );
+    }
   }, [defaultObj]);
 
   const styles = {

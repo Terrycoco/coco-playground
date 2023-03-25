@@ -40,7 +40,7 @@ const DropdownOption = (props) => {
             fontSize: ".8rem",
           }}
         >
-          {getCatFromThemeVar(props.themeVar)}
+          {props.category}
         </span>,
         <span
           key={`${props.element}${props.propName}val`}

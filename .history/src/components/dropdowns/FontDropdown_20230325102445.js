@@ -40,7 +40,7 @@ const DropdownOption = (props) => {
             fontSize: ".8rem",
           }}
         >
-          {getCatFromThemeVar(props.themeVar)}
+          {props.category}
         </span>,
         <span
           key={`${props.element}${props.propName}val`}
@@ -84,6 +84,8 @@ const FontDropdown = ({
   const [current, setCurrent] = useState(defaultObj);
 
   useEffect(() => {
+    console.log("defultfontobj:", defaultObj);
+    console.log("options:", options);
     setCurrent(defaultObj);
   }, [defaultObj]);
 
@@ -155,6 +157,7 @@ const FontDropdown = ({
             fontVar={opt.fontVar}
             name={opt.name}
             style={{ fontFamily: opt.fontVar }}
+            category={opt.themeVar.slice(11, opt.themeVar.length - 1)}
             showCategory={section === "fonts" ? false : true}
             themeVar={
               section === "fonts" ? `var(--font-${propName})` : opt.themeVar
@@ -167,6 +170,9 @@ const FontDropdown = ({
   };
 
   if (current !== undefined) {
+    const category = currentThemeVar
+      ? current.themeVar.slice(11, current.themeVar.length - 1)
+      : "";
     return (
       <OutsideAlerter key={Math.random()} onClickOutside={closeMe}>
         <div data-id="font-dropdown" style={styles.dropdown}>
@@ -180,7 +186,7 @@ const FontDropdown = ({
             >
               {section == "fonts"
                 ? current.name
-                : `${getCatFromThemeVar(current.themeVar)} (${current.name})`}
+                : `${category} (${current.name})`}
             </span>{" "}
             <IconButton
               key={`icon${id}`}
@@ -212,7 +218,3 @@ FontDropdown.propTypes = {
 };
 
 export default FontDropdown;
-
-function getCatFromThemeVar(themevar) {
-  return themevar.slice(11, themevar.length - 1);
-}
