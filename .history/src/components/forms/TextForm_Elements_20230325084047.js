@@ -3,14 +3,19 @@ import FormWrapper from "./FormWrapper";
 import StyleGrid from "@/components/forms/StyleGrid";
 import StyleGridItem from "@/components/forms/StyleGridItem";
 import StyleGridItemSlider from "@/components/forms/StyleGridItemSlider";
+import HeadingCountDropdown from "@/components/dropdowns/HeadingCountDropdown";
 import DeviceMenu from "@/components/menus/DeviceMenu";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTheme, selectHeadingCount } from "@/slices/themeSlice";
-import FontDropdown from "@/components/dropdowns/FontDropdown";
-import { getFontVariableFromName } from "@/fonts/allFonts";
+import { FontDropdown } from "@/components/dropdowns/FontDropdown";
 
-import { selectCurrentDevice, updateCurrentDevice } from "@/slices/uiSlice";
+import {
+  selectCurrentDevice,
+  updateCurrentDevice,
+  selectCurrentDeviceIdx,
+} from "@/slices/uiSlice";
 import { useViewport } from "@/hooks";
+import { isOneOf } from "@/utils";
 
 const TextForm_Elements = (props) => {
   const dispatch = useDispatch();
@@ -18,23 +23,6 @@ const TextForm_Elements = (props) => {
   const theme = useSelector(selectTheme);
   const currentDevice = useSelector(selectCurrentDevice);
   const headingCount = useSelector(selectHeadingCount);
-  const [fontOptions, setFontOptions] = useState([]);
-
-  //set up fonts array for just theme selections
-  useEffect(() => {
-    if (theme.fonts !== undefined) {
-      let result = [];
-      for (const cat in theme.fonts) {
-        result.push({
-          themeVar: `var(--font-${cat})`,
-          name: theme.fonts[cat],
-          fontVar: getFontVariableFromName(theme.fonts[cat]),
-        });
-      }
-      console.log("resut:", result);
-      setFontOptions(result);
-    }
-  }, [theme.fonts]);
 
   useEffect(() => {
     if (currentDevice == undefined) {
@@ -53,18 +41,10 @@ const TextForm_Elements = (props) => {
     return result;
   };
 
-  const getDefaultFontObj = (val) => {
-    //val in theme is themeVar
-    const obj = fontOptions.find((f) => f.themeVar === val);
-    return obj;
-  };
-
   const getElementItems = (el) => {
     let result = [];
     for (const prp in theme.text[el]) {
       switch (prp) {
-        case "color":
-          break; //ignore color for now
         case "fontSize":
         case "lineHeight":
           result.push(
@@ -79,21 +59,13 @@ const TextForm_Elements = (props) => {
             />
           );
           break;
-        case "fontFamily":
-          result.push(
-            <StyleGridItem label={prp}>
-              <FontDropdown
-                key={`${el}fontFamily`}
-                options={fontOptions}
-                section="text"
-                element={el}
-                propName="fontFamily"
-                id={`${el}fontFamily`}
-                defaultObj={getDefaultFontObj(theme.text[el].fontFamily)}
-              />
-            </StyleGridItem>
-          );
-          break;
+          case "fontFamily":
+              result.push(
+                <StyleGridItem label={prp}>
+                  <FontDropdown 
+                </StyleGridItem>
+              );
+              break;
         default:
           result.push(
             <StyleGridItemSlider

@@ -23,15 +23,15 @@ const TextForm_Elements = (props) => {
   //set up fonts array for just theme selections
   useEffect(() => {
     if (theme.fonts !== undefined) {
+      console.log("themefonts:", theme.fonts);
       let result = [];
       for (const cat in theme.fonts) {
         result.push({
-          themeVar: `var(--font-${cat})`,
+          themeVar: `var(--font-${cat})}`,
           name: theme.fonts[cat],
           fontVar: getFontVariableFromName(theme.fonts[cat]),
         });
       }
-      console.log("resut:", result);
       setFontOptions(result);
     }
   }, [theme.fonts]);

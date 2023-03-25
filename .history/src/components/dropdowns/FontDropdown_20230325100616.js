@@ -37,7 +37,6 @@ const DropdownOption = (props) => {
             width: "50%",
             fontFamily: variables["var(--font-forms)"],
             color: "gray",
-            fontSize: ".8rem",
           }}
         >
           {props.category}
@@ -49,9 +48,7 @@ const DropdownOption = (props) => {
             fontFamily: props.fontVar,
             paddingLeft: "1rem",
           }}
-        >
-          {props.name}
-        </span>,
+        ></span>,
       ];
     }
   };
@@ -175,16 +172,10 @@ const FontDropdown = ({
       <OutsideAlerter key={Math.random()} onClickOutside={closeMe}>
         <div data-id="font-dropdown" style={styles.dropdown}>
           <div style={styles.display} onClick={handleClick}>
-            <span
-              style={{
-                fontFamily: current.fontVar,
-                paddingLeft: "1rem",
-                fontSize: "1rem",
-              }}
-            >
+            <span style={{ fontFamily: current.fontVar, paddingLeft: "1rem" }}>
               {section == "fonts"
                 ? current.name
-                : `${category} (${current.name})`}
+                : `${current.name} (${category})`}
             </span>{" "}
             <IconButton
               key={`icon${id}`}

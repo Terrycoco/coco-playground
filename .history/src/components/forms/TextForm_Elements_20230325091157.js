@@ -22,18 +22,15 @@ const TextForm_Elements = (props) => {
 
   //set up fonts array for just theme selections
   useEffect(() => {
-    if (theme.fonts !== undefined) {
-      let result = [];
-      for (const cat in theme.fonts) {
-        result.push({
-          themeVar: `var(--font-${cat})`,
-          name: theme.fonts[cat],
-          fontVar: getFontVariableFromName(theme.fonts[cat]),
-        });
-      }
-      console.log("resut:", result);
-      setFontOptions(result);
+    let result = [];
+    for (const cat in theme.fonts) {
+      result.push({
+        themeVar: `var(--font-${cat})}`,
+        name: theme.fonts[cat],
+        fontVar: getFontVariableFromName(theme.fonts[cat]),
+      });
     }
+    setFontOptions(result);
   }, [theme.fonts]);
 
   useEffect(() => {
@@ -63,8 +60,6 @@ const TextForm_Elements = (props) => {
     let result = [];
     for (const prp in theme.text[el]) {
       switch (prp) {
-        case "color":
-          break; //ignore color for now
         case "fontSize":
         case "lineHeight":
           result.push(

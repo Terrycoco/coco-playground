@@ -362,8 +362,7 @@ const getFontClassName = (name) => {
   }
 };
 
-//used by TextForm
-const getFontVariableFromName = (name) => {
+const getFontVariable = (name) => {
   if (!name) return;
   let str = name.replaceAll(" ", "-").toLowerCase();
   return `var(--font-${str})`;
@@ -411,7 +410,7 @@ module.exports = {
   fonts,
   getFontByName,
   getFontClassName,
-  getFontVariableFromName,
+  getFontVariable,
   getFontNameFromVar,
   getFontsArray,
   getCSSFontVariables,

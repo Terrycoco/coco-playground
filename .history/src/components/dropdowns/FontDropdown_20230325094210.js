@@ -22,6 +22,7 @@ const DropdownOption = (props) => {
       name: props.name, //display name of font
       element: props.element,
     };
+    console.log("payload to send", payload);
     dispatch(updateFont(payload));
     props.onSelect(payload); //to parent to close dropdown
   };
@@ -37,7 +38,6 @@ const DropdownOption = (props) => {
             width: "50%",
             fontFamily: variables["var(--font-forms)"],
             color: "gray",
-            fontSize: ".8rem",
           }}
         >
           {props.category}
@@ -157,7 +157,7 @@ const FontDropdown = ({
             fontVar={opt.fontVar}
             name={opt.name}
             style={{ fontFamily: opt.fontVar }}
-            category={opt.themeVar.slice(11, opt.themeVar.length - 1)}
+            category={opt.propName}
             showCategory={section === "fonts" ? false : true}
             themeVar={
               section === "fonts" ? `var(--font-${propName})` : opt.themeVar
@@ -170,21 +170,12 @@ const FontDropdown = ({
   };
 
   if (current !== undefined) {
-    const category = current.themeVar.slice(11, current.themeVar.length - 1);
     return (
       <OutsideAlerter key={Math.random()} onClickOutside={closeMe}>
         <div data-id="font-dropdown" style={styles.dropdown}>
           <div style={styles.display} onClick={handleClick}>
-            <span
-              style={{
-                fontFamily: current.fontVar,
-                paddingLeft: "1rem",
-                fontSize: "1rem",
-              }}
-            >
-              {section == "fonts"
-                ? current.name
-                : `${category} (${current.name})`}
+            <span style={{ fontFamily: current.fontVar, paddingLeft: "1rem" }}>
+              {current.name}
             </span>{" "}
             <IconButton
               key={`icon${id}`}

@@ -51,7 +51,7 @@ const SettingsForm = (props) => {
 
   if (showDevice == undefined) return null;
   return (
-    <div style={{ minHeight: "120vh", paddingBottom: "100px" }}>
+    <div style={{ minHeight: "120vh" }}>
       <FormWrapper key="frmTextSet" title={props.title}>
         <StyleGrid title="Project Settings">
           <StyleGridItem label="Heading Levels">

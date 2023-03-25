@@ -362,7 +362,6 @@ const getFontClassName = (name) => {
   }
 };
 
-//used by TextForm
 const getFontVariableFromName = (name) => {
   if (!name) return;
   let str = name.replaceAll(" ", "-").toLowerCase();

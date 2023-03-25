@@ -68,7 +68,6 @@ export const { updateText, updateThemeValue } = themeSlice.actions;
 export const selectHeadingCount = (state) => state.theme.project.headingCount;
 export const selectTheme = (state) => state.theme;
 export const selectColors = (state) => state.theme.colors;
-export const selectFonts = (state) => state.theme.fonts;
 export const selectColorVariants = (state) => state.theme.colorVariants;
 export const selectText = (state) => state.theme.text;
 export const selectDevices = (state) => state.theme.devices;

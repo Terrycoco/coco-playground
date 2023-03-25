@@ -26,7 +26,7 @@ const TextForm_Elements = (props) => {
       let result = [];
       for (const cat in theme.fonts) {
         result.push({
-          themeVar: `var(--font-${cat})`,
+          themeVar: `var(--font-${cat})}`,
           name: theme.fonts[cat],
           fontVar: getFontVariableFromName(theme.fonts[cat]),
         });

@@ -58,6 +58,7 @@ export const themeSlice = createSlice({
         if (section == "fonts") {
           state.fonts[propName] = name;
         } else {
+          console.log("got here", action.payload);
           state[section][element][propName] = themeVar;
         }
       });

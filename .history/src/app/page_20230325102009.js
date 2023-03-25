@@ -55,7 +55,7 @@ export default function Page() {
       let fs = theme.text[el].fontSize[currentDevice];
       let fsem = fs.replace("rem", "em");
       let lh = theme.text[el].lineHeight[currentDevice];
-      style.fontFamily = variables[style.fontFamily];
+      style.fontFamily = variables[styles.fontFamily];
       style.fontSize = fsem;
       style.lineHeight = lh;
       style.color = style.color
@@ -77,7 +77,7 @@ export default function Page() {
         let fs = theme.text[el].fontSize[currentDevice];
         let fsem = fs.replace("rem", "em");
         let lh = theme.text[el].lineHeight[currentDevice];
-        style.fontFamily = variables[style.fontFamily];
+        style.fontFamily = variables["var(--font-display)"];
         style.fontSize = fsem;
         style.lineHeight = lh;
         style.color = style.color
