@@ -3,6 +3,7 @@ import FormWrapper from "./FormWrapper";
 import StyleGrid from "@/components/forms/StyleGrid";
 import StyleGridItem from "@/components/forms/StyleGridItem";
 import StyleGridItemSlider from "@/components/forms/StyleGridItemSlider";
+import StyleGridElement from "./StyleGridElement";
 import HeadingCountDropdown from "@/components/dropdowns/HeadingCountDropdown";
 import DeviceMenu from "@/components/menus/DeviceMenu";
 import { useSelector, useDispatch } from "react-redux";
@@ -32,39 +33,6 @@ const ContainerForm = (props) => {
     let result = [];
     for (const el in theme.containers) {
       result.push(getElement(el));
-    }
-    return result;
-  };
-
-  const getElementItems = (el) => {
-    let result = [];
-    for (const prp in theme.containers[el]) {
-      if (isOneOf(prp, ["fontSize", "lineHeight"])) {
-        //should't have these hrere
-        result.push(
-          <StyleGridItemSlider
-            key={`${el}${prp}`}
-            section="text"
-            element={el}
-            propName={prp}
-            device={currentDevice}
-            label={`${prp} (${currentDevice})`}
-            defaultValue={theme.containers[el][prp][currentDevice]}
-          />
-        );
-      } else {
-        result.push(
-          <StyleGridItemSlider
-            key={`${el}${prp}`}
-            section="text"
-            element={el}
-            propName={prp}
-            device={currentDevice}
-            label={prp}
-            defaultValue={theme.containers[el][prp]}
-          />
-        );
-      }
     }
     return result;
   };

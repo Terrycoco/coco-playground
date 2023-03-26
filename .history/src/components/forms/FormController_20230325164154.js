@@ -8,13 +8,13 @@ import {
 } from "@/slices/uiSlice";
 import { selectVariables } from "@/slices/variablesSlice";
 import { Tab, TabContainer } from "@/components/tabs";
-import TextForm from "./TextForm";
+import TextForm_Elements from "./ElementsForm";
 import TextForm_Settings from "./TextForm_Settings";
 import ColorForm_Elements from "./ColorForm_Elements";
 import ColorForm_Settings from "./ColorForm_Settings";
 import SettingsForm from "./SettingsForm";
-import ContainersForm from "./ContainersForm";
-import ElementsForm from "./TextForm";
+import ContainerForm from "./ContainerForm";
+import ElementsForm from "./ElementsForm";
 import DeviceMenu from "@/components/menus/DeviceMenu";
 
 //may want to pass in width val
@@ -62,10 +62,10 @@ const FormController = (props) => {
   const getForm = () => {
     switch (currentForm) {
       case "typography": {
-        return <TextForm title="Text Elements" />;
+        return <TextForm_Elements title="Text Elements" />;
       }
       case "containers": {
-        return <ContainersForm title="Container Elements" />;
+        return <ContainerForm title="Container Elements" />;
       }
       case "settings": {
         return <SettingsForm title="Project Settings" />;
