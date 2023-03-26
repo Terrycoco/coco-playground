@@ -1,0 +1,67 @@
+/* container  - relative so child will position under it */
+.dropdown {
+  position: relative;
+  display: block;
+  width: 100%; /*takes width of parent */
+}
+
+.dropbtn {
+  position: relative;
+  background-color: #fff;
+  outline: 1px solid #d5d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "var(--font-forms)";
+  font-size: 14px;
+  line-height: 29px;
+  height: 35px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding-left: 0.5rem;
+  z-index: 0;
+}
+
+.dropdowncontent {
+  display: none;
+  min-width: 98%;
+  max-height: 0; /* this will change on open */
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  height: 0;
+  background-color: #fefefe;
+  border: 1px 1px 1px 1px solid darkgray;
+  margin-right: 1%;
+  padding: 0;
+  transition: max-height 1s;
+  border-radius: 1px;
+  z-index: 20;
+  padding-bottom: 2rem;
+}
+
+.open {
+  display: block;
+  height: auto;
+  max-height: 500px;
+  overflow-y: scroll;
+  z-index: 200;
+}
+
+the link options .dropdowncontent li {
+  color: var(--clr-blackish75);
+  background-color: lightgray;
+  font-family: "Arial, Helvetica, sans";
+  font-size: 16px;
+  padding: 6px 12px;
+  text-decoration: none;
+  list-style-type: none;
+  display: block;
+}
