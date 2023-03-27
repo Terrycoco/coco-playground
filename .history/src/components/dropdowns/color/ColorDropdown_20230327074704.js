@@ -34,15 +34,15 @@ const DropdownOption = ({
 }) => {
   const styles = {
     li: {
-      backgroundColor: value,
-      color: textColor,
-      display: "flex",
-      justifyContent: "center",
-      fontSize: "14px",
+      color: variables["var(--clr-blackish75)"],
+      backgroundColor: variables["var(--clr-whitish)"],
+      fontSize: "16px",
       textDecoration: "none",
       listStyleType: "none",
       height: "32px",
       lineHeight: "32px",
+      display: "block",
+      paddingLeft: "1rem",
       overflowY: "scroll",
     },
   };
@@ -63,7 +63,12 @@ const DropdownOption = ({
       key={element + propName + value}
       data-value={value}
       onClick={handleSelect}
-      style={styles.li}
+      style={{
+        backgroundColor: value,
+        color: textColor,
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
       {label}
     </li>

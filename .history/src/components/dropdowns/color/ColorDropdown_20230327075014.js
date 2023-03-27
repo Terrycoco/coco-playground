@@ -38,11 +38,12 @@ const DropdownOption = ({
       color: textColor,
       display: "flex",
       justifyContent: "center",
-      fontSize: "14px",
+      fontSize: "16px",
       textDecoration: "none",
       listStyleType: "none",
       height: "32px",
       lineHeight: "32px",
+      display: "block",
       overflowY: "scroll",
     },
   };
