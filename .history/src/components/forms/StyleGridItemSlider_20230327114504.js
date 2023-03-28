@@ -60,8 +60,8 @@ const StyleGridItemSlider = ({
       case "letterSpacing":
       case "wordSpacing":
         return {
-          min: -2,
-          max: 10,
+          min: -1,
+          max: 8,
           value: val,
           step: 1,
           unit: "px",

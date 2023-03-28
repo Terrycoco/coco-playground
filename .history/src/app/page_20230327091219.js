@@ -21,8 +21,8 @@ const query = gql`
 `;
 
 export default function Page() {
-  // const client = getClient();
-  // const { loading, data } = useQuery(query, { client });
+  const client = getClient();
+  const { loading, data } = useQuery(query, { client });
 
   const [, updateState] = useState();
   const [bodyFont, setBodyFont] = useState();
@@ -106,16 +106,16 @@ export default function Page() {
     }
   };
 
-  // if (loading) {
-  //   return <p>Loading...</p>;
-  // }
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
       <style type="text/css">{cssVars}</style>
       <main style={getContainerStyle("main")}>
         <section style={getContainerStyle("section")}>
-          {/*data.now*/}
+          {data.now}
           <h1 style={getHStyle("h1")}>
             Welcome to Theme Playground{"   "}
             <span style={styles.smgray}>(h1)</span>

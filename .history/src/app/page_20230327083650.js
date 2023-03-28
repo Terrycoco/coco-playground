@@ -1,6 +1,6 @@
 "use client";
 import { getClient, clientNoCache } from "./client";
-import { gql, useQuery } from "@apollo/client";
+import { gql } from "@apollo/client";
 import { useEffect, useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useViewport } from "@/hooks";
@@ -14,16 +14,7 @@ import { selectVariables } from "@/slices/variablesSlice";
 import { getTextColorFromHex } from "@/utils/colorUtils";
 import { getCSSVariablesForDOM } from "@/utils/cssUtils";
 
-const query = gql`
-  query Now {
-    now(id: "1")
-  }
-`;
-
 export default function Page() {
-  // const client = getClient();
-  // const { loading, data } = useQuery(query, { client });
-
   const [, updateState] = useState();
   const [bodyFont, setBodyFont] = useState();
   const dispatch = useDispatch();
@@ -106,16 +97,11 @@ export default function Page() {
     }
   };
 
-  // if (loading) {
-  //   return <p>Loading...</p>;
-  // }
-
   return (
     <>
       <style type="text/css">{cssVars}</style>
       <main style={getContainerStyle("main")}>
         <section style={getContainerStyle("section")}>
-          {/*data.now*/}
           <h1 style={getHStyle("h1")}>
             Welcome to Theme Playground{"   "}
             <span style={styles.smgray}>(h1)</span>
