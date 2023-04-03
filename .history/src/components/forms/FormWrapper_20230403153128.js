@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectVariables } from "@/slices/variablesSlice";
+import DeviceMenu from "@/components/menus/DeviceMenu";
 
 const FormWrapper = (props) => {
   const variables = useSelector(selectVariables);

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectVariables } from "@/slices/variablesSlice";
+import DeviceMenu from "@/components/menus/DeviceMenu";
 
 const FormWrapper = (props) => {
   const variables = useSelector(selectVariables);
@@ -24,6 +25,7 @@ const FormWrapper = (props) => {
 
   return (
     <div style={styles.form}>
+      <DeviceMenu />
       <div style={styles.title}>{props.title}</div>
       {props.children}
     </div>

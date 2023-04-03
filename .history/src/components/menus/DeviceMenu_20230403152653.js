@@ -30,7 +30,6 @@ const DeviceMenu = () => {
       flexDirection: "row",
       justifyContent: "space-evenly",
       backgroundColor: "var(--clr-primary5)",
-      zIndex: 16,
     },
     li: {
       fontFamily: "Arial",

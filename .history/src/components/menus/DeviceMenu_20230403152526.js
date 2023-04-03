@@ -23,14 +23,12 @@ const DeviceMenu = () => {
   const styles = {
     menu: {
       position: "sticky",
-      top: 0,
+      top: containers.header.height,
       paddingBottom: ".5rem",
-      paddingTop: "0.5rem",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-evenly",
-      backgroundColor: "var(--clr-primary5)",
-      zIndex: 16,
+      backgroundColor: "transparent",
     },
     li: {
       fontFamily: "Arial",

@@ -7,7 +7,7 @@ import {
   updateIsFullScreen,
   selectIsFullScreen,
 } from "@/slices/uiSlice";
-import { selectContainers } from "@/slices/themeSlice";
+import { selectDevices } from "@/slices/themeSlice";
 import css from "./menu.module.css";
 import { selectVariables } from "@/slices/variablesSlice";
 import { useViewport } from "@/hooks";
@@ -16,21 +16,19 @@ const DeviceMenu = () => {
   const currentDevice = useSelector(selectCurrentDevice);
   const fullScreen = useSelector(selectIsFullScreen);
   const dispatch = useDispatch();
-  const containers = useSelector(selectContainers); //array
+  const devices = useSelector(selectDevices); //array
   const userDevice = useViewport();
   const variables = useSelector(selectVariables);
 
   const styles = {
     menu: {
       position: "sticky",
-      top: 0,
+      paddingTop: "1rem",
       paddingBottom: ".5rem",
-      paddingTop: "0.5rem",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-evenly",
-      backgroundColor: "var(--clr-primary5)",
-      zIndex: 16,
+      backgroundColor: "transparent",
     },
     li: {
       fontFamily: "Arial",

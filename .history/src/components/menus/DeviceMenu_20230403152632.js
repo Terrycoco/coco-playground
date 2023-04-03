@@ -25,12 +25,10 @@ const DeviceMenu = () => {
       position: "sticky",
       top: 0,
       paddingBottom: ".5rem",
-      paddingTop: "0.5rem",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-evenly",
       backgroundColor: "var(--clr-primary5)",
-      zIndex: 16,
     },
     li: {
       fontFamily: "Arial",
