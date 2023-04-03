@@ -16,7 +16,6 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     zIndex: "1000",
-    maxHeight: "500px",
     padding: "10px 20px",
   },
   instructions: {
@@ -36,9 +35,8 @@ const styles = {
     width: "100%",
     paddingRight: "1rem",
     paddingLeft: "1rem",
-    marginBottom: "1rem",
+    paddingBottom: "1rem",
     overflowY: "scroll",
-    fontSize: "1rem",
   },
   alert: {
     position: "relative",

@@ -36,9 +36,8 @@ const styles = {
     width: "100%",
     paddingRight: "1rem",
     paddingLeft: "1rem",
-    marginBottom: "1rem",
+    paddingBottom: "1rem",
     overflowY: "scroll",
-    fontSize: "1rem",
   },
   alert: {
     position: "relative",
