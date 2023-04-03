@@ -1,0 +1,205 @@
+/* to use: import this file and set this as currentTheme in /src/themes/index
+const _default = {
+     :root {
+	--clr-primary: #fc3a79;
+	--clr-secondary: #fe572e;
+	--clr-blackish: #261f22;
+	--clr-whitish: #f5f5f4;
+	--clr-error: #dc2626;
+	--clr-primary75: #fd6b99;
+	--clr-primary50: #fe9dbb;
+	--clr-primary25: #fecedd;
+	--clr-primary10: #ffebf1;
+	--clr-primary5: #fff5f8;
+	--clr-secondary75: #fe8162;
+	--clr-secondary50: #feab96;
+	--clr-secondary25: #ffd5cb;
+	--clr-secondary10: #ffeeea;
+	--clr-secondary5: #fff7f5;
+	--clr-blackish75: #635158;
+	--clr-blackish50: #9c868f;
+	--clr-blackish25: #cdc2c7;
+	--clr-blackish10: #ebe7e9;
+	--clr-blackish5: #f5f3f4;
+	--font-body: var(--font-gelasio);
+	--font-display: var(--font-gelasio);
+	--font-special: var(--font-caveat);
+	--font-mono: var(--font-space-mono);
+	--font-forms: var(--font-poppins);
+	font-size: 18px;
+	line-height: 1.5;
+	--fs-body: 1rem;
+	--lh-body: 1.5;
+	--fs-p: 1rem;
+	--lh-p: 1.5;
+	--fs-h1: 2rem;
+	--lh-h1: 1.5;
+	--fs-sm: .8rem;
+	--fs-xs: .6rem;
+
+}
+
+p {
+	color: var(--clr-blackish);
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: var(--fs-p);
+	line-height: var(--lh-p);
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	max-width: 60ch;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	color: var(--clr-blackish);
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: var(--fs-h1);
+	line-height: var(--lh-h1);
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	max-width: 60ch;
+	margin-bottom: 1rem;
+}
+
+small {
+	color: var(--clr-blackish);
+	font-family: var(--font-forms);
+	font-weight: 400;
+	font-size: var(--fs-small);
+	line-height: var(--lh-small);
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	max-width: 60ch;
+	margin-bottom: 0rem;
+}
+
+body {
+	background-color: var(--clr-whitish);
+}
+
+header {
+	background-color: var(--clr-primary);
+	color: var(--clr-whitish);
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+}
+
+main {
+	background-color: var(--clr-whitish);
+	padding-top: 2rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+section {
+	background-color: var(--clr-whitish);
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+article {
+	background-color: var(--clr-primary);
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+aside {
+	background-color: var(--clr-whitish);
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+footer {
+	background-color: var(--clr-primary50);
+	color: var(--clr-blackish);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+form {
+	background-color: var(--clr-primary5);
+	color: var(--clr-blackish);
+	height: 0rem;
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+@media (min-width: 480) {
+:root {
+	font-size: 1rem;
+	--fs-body: 1rem;
+	--lh-body: 1.5;
+	--fs-p: 1rem;
+	--lh-p: 1.5;
+	--fs-h1: 2rem;
+	--lh-h1: 1.5;
+}
+}
+
+@media (min-width: 768) {
+:root {
+	font-size: 1rem;
+	--fs-body: 1rem;
+	--lh-body: 1.4;
+	--fs-p: 1rem;
+	--lh-p: 1.4;
+	--fs-h1: 2rem;
+	--lh-h1: 1.4;
+}
+}
+
+@media (min-width: 1024) {
+:root {
+	font-size: 1rem;
+	--fs-body: 1rem;
+	--lh-body: 1.3;
+	--fs-p: 1rem;
+	--lh-p: 1.3;
+	--fs-h1: 2rem;
+	--lh-h1: 1.3;
+}
+}
+
+@media (min-width: 1200) {
+:root {
+	font-size: 1rem;
+	--fs-body: 1rem;
+	--lh-body: 1.2;
+	--fs-p: 1rem;
+	--lh-p: 1.2;
+	--fs-h1: 2rem;
+	--lh-h1: 1.2;
+}
+}
+
+
