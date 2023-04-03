@@ -41,7 +41,7 @@ const Drawer = (props) => {
       position: "fixed",
       zIndex: 15,
       top: 0,
-      marginTop: containers.header.height,
+      paddingTop: containers.header.height,
       right: "0",
       backgroundColor: variables["var(--clr-primary5)"], //TODO FORM COLOR?
       overflowX: "hidden",

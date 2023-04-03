@@ -5,6 +5,7 @@ import StyleGrid from "@/components/forms/StyleGrid";
 import StyleGridExpander from "@/components/forms/StyleGridExpander";
 import StyleGridItem from "@/components/forms/StyleGridItem";
 import StyleGridItemSlider from "@/components/forms/StyleGridItemSlider";
+import DeviceMenu from "@/components/menus/DeviceMenu";
 import StyleGridElement from "./StyleGridElement";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTheme, selectHeadingCount } from "@/slices/themeSlice";
@@ -63,9 +64,9 @@ const TextForm = (props) => {
 
   const getElement = (el) => {
     return (
-      <StyleGridExpander key={`text${el}grid`} title={el}>
+      <StyleGrid key={`text${el}grid`} title={el}>
         <StyleGridElement key={`text${el}el`} section="text" element={el} />
-      </StyleGridExpander>
+      </StyleGrid>
     );
   };
 
@@ -73,6 +74,7 @@ const TextForm = (props) => {
   if (currentDevice == undefined) return null;
   return (
     <>
+      <DeviceMenu />
       <FormWrapper key={`textwrap`} title={props.title}>
         {loopThroughElements()}
       </FormWrapper>

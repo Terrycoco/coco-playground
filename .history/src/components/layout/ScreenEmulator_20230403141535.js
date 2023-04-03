@@ -47,8 +47,8 @@ const ScreenEmulator = ({ children, ...props }) => {
 
   const getEmulation = () => {
     if (baseFontSize !== undefined) {
-      let headerheight = getCSSValUnit(theme.containers.header.height).val;
-      let marginTop = headerheight + 1 + "em";
+      let headerheight = getCSSValUnit(themecontainers.header.height).val;
+      let marginTop = headerheight + 1 + "rem";
       return {
         border: "1px solid darkgray",
         position: "relative",

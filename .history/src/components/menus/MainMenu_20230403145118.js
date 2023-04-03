@@ -122,6 +122,14 @@ function MainMenu() {
           >
             misc
           </li>
+          <li
+            id="css"
+            style={getLiStyles("settings")}
+            className={css.li}
+            onClick={handleClick}
+          >
+            View CSS
+          </li>
         </menu>
       </OutsideAlerter>
     );

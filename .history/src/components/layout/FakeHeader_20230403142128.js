@@ -23,7 +23,7 @@ function FakeHeader() {
     return styles;
   };
 
-  return <header style={getHeaderStyles()}>I am a demo header</header>;
+  return <header style={getHeaderStyles()}>I am a fake header</header>;
 }
 
 export default FakeHeader;

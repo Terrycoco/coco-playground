@@ -19,11 +19,11 @@ function FakeHeader() {
   const getHeaderStyles = () => {
     let styles = { ...theme.containers.header };
     styles.backgroundColor = variables[styles.backgroundColor];
-    styles.position = "sticky"; //not fixed
+    styles.position = "absolute"; //not fixed
     return styles;
   };
 
-  return <header style={getHeaderStyles()}>I am a demo header</header>;
+  return <header style={getHeaderStyles()}>I am a fake header</header>;
 }
 
 export default FakeHeader;

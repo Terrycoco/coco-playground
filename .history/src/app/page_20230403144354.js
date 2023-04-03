@@ -71,12 +71,10 @@ export default function Page() {
       ? variables[style.backgroundColor]
       : "inherit";
 
-    if (style.hasOwnProperty("width")) {
-      style.width = style.width.replace("vw", "%");
-    }
+    style.width.replace("vw", "%");
     //change rems to em
     for (const prp in style) {
-      style[prp] = style[prp].replace("rem", "em");
+      style[prp].replace("rem", "em");
     }
     console.log("style:", style);
     return style;

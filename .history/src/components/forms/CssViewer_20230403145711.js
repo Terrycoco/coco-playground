@@ -109,7 +109,7 @@ const CssViewer = (props) => {
             <div>
               This is your theme.css. Copy and paste it into{" "}
               <b>src/themes/theme.css</b> or make a new css file and make sure
-              it is imported into your layout or app file.
+              it is imported into your layout or app.
             </div>
             <div style={styles.buttonRow}>
               <Button onClick={closeMe}>Close</Button>

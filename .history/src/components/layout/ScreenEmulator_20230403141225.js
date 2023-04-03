@@ -10,7 +10,7 @@ import {
 import { selectDeviceSettings, selectTheme } from "@/slices/themeSlice";
 import FakeHeader from "@/components/layout/FakeHeader";
 import { useViewport } from "@/hooks";
-import { isOneOf, getCSSValUnit } from "@/utils";
+import { isOneOf } from "@/utils";
 
 const ScreenEmulator = ({ children, ...props }) => {
   const userDevice = useSelector(selectUserDevice);
@@ -47,15 +47,13 @@ const ScreenEmulator = ({ children, ...props }) => {
 
   const getEmulation = () => {
     if (baseFontSize !== undefined) {
-      let headerheight = getCSSValUnit(theme.containers.header.height).val;
-      let marginTop = headerheight + 1 + "em";
       return {
         border: "1px solid darkgray",
         position: "relative",
         width: `${width}px`,
         overflowX: "hidden",
         fontSize: baseFontSize,
-        marginTop: marginTop,
+        marginTop: calc(theme.containers.header.height + "1rem"),
         marginLeft: "1rem",
         height: window.innerHeight - 75 + "px",
         overflowY: "scroll",

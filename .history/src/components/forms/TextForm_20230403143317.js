@@ -5,6 +5,7 @@ import StyleGrid from "@/components/forms/StyleGrid";
 import StyleGridExpander from "@/components/forms/StyleGridExpander";
 import StyleGridItem from "@/components/forms/StyleGridItem";
 import StyleGridItemSlider from "@/components/forms/StyleGridItemSlider";
+import DeviceMenu from "@/components/menus/DeviceMenu";
 import StyleGridElement from "./StyleGridElement";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTheme, selectHeadingCount } from "@/slices/themeSlice";
